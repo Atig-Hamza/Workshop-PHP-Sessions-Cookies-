@@ -17,9 +17,14 @@ $username = $_SESSION['username'];
 <html>
 <head>
     <title>Dashboard</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <h2>Bienvenue, <?php echo htmlspecialchars($username); ?> !</h2>
-    <a href="logout.php">Déconnexion</a>
+    <div class="container mx-auto p-4">
+        <h2 class="text-2xl font-bold mb-4">Bienvenue, <?php echo htmlspecialchars($username); ?> !</h2>
+        <a href="logout.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Déconnexion
+        </a>
+    </div>
 </body>
 </html>
